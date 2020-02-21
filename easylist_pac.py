@@ -681,7 +681,6 @@ if (
    */
    ||
    // Apple Mobile Software Update
-   (host == "mesu.apple.com") || dnsDomainIs(host, "mesu.apple.com")
 )
         return "DIRECT";
 else
@@ -1481,7 +1480,6 @@ good_da_host_exact = ['apple.com',
                       'p32-ckdatabase.fe.apple-dns.net',
                       'configuration.apple.com',
                       'configuration.apple.com.edgekey.net',
-                      'mesu.apple.com',
                       'mesu-cdn.apple.com.akadns.net',
                       'mesu.g.aaplimg.com',
                       'gspe1-ssl.ls.apple.com',
@@ -1536,7 +1534,10 @@ good_da_host_regex = []
 good_da_hostpath_exact = []
 good_da_hostpath_regex = []
 good_da_regex = []
-bad_da_host_exact = []
+bad_da_host_exact = [
+                       'mesu.apple.com',
+                       'appldnld.apple.com',
+                       'gdmf.apple.com' ]
 bad_da_host_regex = []
 bad_da_hostpath_exact = []
 bad_da_hostpath_regex = []
